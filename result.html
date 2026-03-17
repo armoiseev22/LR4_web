@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ваш вопрос отправлен</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .result-card {
+            background: #f9f9f9;
+            border-left: 4px solid #003366;
+            padding: 16px 20px;
+            margin: 20px;
+        }
+        .result-card p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .result-card a {
+            display: inline-block;
+            margin-top: 16px;
+            color: #003366;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .result-card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="color:darkblue;">Вопрос отправлен!</h1>
+    <nav>
+        <a href="/">Главная</a> |
+        <a href="/contact">Задать вопрос</a>
+    </nav>
+    <hr>
+</header>
+
+<main>
+    <div class="result-card">
+        <p><strong>Имя:</strong> {{name}}</p>
+        <p><strong>Email:</strong> {{email}}</p>
+        <p><strong>Статус:</strong> {{status}}</p>
+        <p><strong>Тема:</strong> {{topic}}</p>
+        <p><strong>Сообщение:</strong> {{message}}</p>
+        <p><strong>Оценка сайта:</strong> {{rating}}</p>
+        <a href="/contact">← Задать ещё вопрос</a>
+    </div>
+</main>
+
+<footer>
+    <p>© <time datetime="2026">2026</time></p>
+</footer>
+
+</body>
+</html>

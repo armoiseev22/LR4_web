@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Я — студент НИУ ВШЭ">
+    <meta name="author" content="Student">
+    <base href="./">
+    <title>Я — студент НИУ ВШЭ</title>
+    <link rel="icon" href="images/Image.jpg">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.css">
+
+    <style>
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1 style="text-align:center; color:darkblue;">Я — студент НИУ ВШЭ</h1>
+
+    <nav>
+        <a href="index.html">Главная</a> |
+        <a href="contact.html">Задать вопрос</a>
+    </nav>
+
+    <hr>
+
+    <p><strong>Если вам скучно и вы хотите включить музыку на фон — воспользуйтесь плеером ниже.</strong></p>
+
+    <audio controls>
+        <source src="audio/music.mp3" type="audio/mpeg">
+    </audio>
+</header>
+
+<main>
+
+<section>
+    <article>
+        <h2>Об обучении</h2>
+        <p class="highlight">
+            Я обучаюсь на <mark>4 курсе</mark> бакалаврской программы «Прикладная математика».
+        </p>
+        <p>Обучение проходит в <data value="MIEM">МИЭМ НИУ ВШЭ</data>.</p>
+    </article>
+</section>
+
+<section>
+    <h2>О НИУ ВШЭ</h2>
+
+    <details>
+        <summary>Краткая информация</summary>
+        <ul>
+            <li>Высокое качество обучения и востребованность выпускников.</li>
+            <li>Формирование компетенций будущего: программирование, Data Culture, ИИ.</li>
+            <li>Индивидуальные образовательные траектории и поддержка студентов.</li>
+            <li>Лидер по приему призеров ВсОШ.</li>
+            <li>Десятки научных институтов, центров и лабораторий.</li>
+        </ul>
+    </details>
+</section>
+
+<section>
+    <h2>Спортивные направления</h2>
+
+    <ol class="inline-list">
+        <li>Диск-гольф</li>
+        <li>Керлинг</li>
+        <li>Кунг-фу</li>
+        <li>Академическая гребля</li>
+        <li>Фридайвинг</li>
+        <li>Алтимат</li>
+        <li>Парусный спорт</li>
+        <li>Го</li>
+    </ol>
+
+    <dl>
+        <dt>Алтимат</dt>
+        <dd>Командная игра с летающим диском.</dd>
+    </dl>
+</section>
+
+<section>
+    <h2>МИЭМ НИУ ВШЭ</h2>
+
+    <figure>
+        <picture>
+            <source srcset="images/Image.jpg">
+            <img src="images/Image.jpg" alt="Здание МИЭМ" width="400" usemap="#miemmap">
+        </picture>
+        <figcaption>Здание МИЭМ</figcaption>
+    </figure>
+
+    <map name="miemmap">
+        <area shape="rect" coords="0,0,200,200" href="https://www.hse.ru" alt="Сайт ВШЭ">
+    </map>
+</section>
+
+<section>
+    <h2>Дисциплины по годам</h2>
+
+    <table>
+        <caption>Основные дисциплины</caption>
+
+        <thead>
+            <tr>
+                <th>Курс</th>
+                <th>Дисциплины</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Математический анализ, Линейная алгебра и аналитическая геометрия, Алгоритмизация и программирование</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Теоретическая механика, Дифференциальные уравнения, Теория вероятностей и математическая статистика</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Функциональный анализ, Анализ данных и машинное обучение, Базы данных</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Численные методы, Асимптотические методы</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">Срок обучения — 4 года</td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+
+<section>
+    <h2>Майнор «Биоинформатика»</h2>
+
+    <ul>
+        <li>Медицинская биоинформатика</li>
+        <li>Биоинформатика ДНК, РНК и белков</li>
+        <li>Введение в эпигеномику</li>
+        <li>Анализ данных секвенирования</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Если устали, можете отдохнуть и посмотреть видео</h2>
+
+    <video width="400" controls>
+        <source src="videos/video.mp4" type="video/mp4">
+    </video>
+</section>
+
+<section>
+    <h2>Дополнительные элементы</h2>
+
+    <button onclick="document.getElementById('info').showModal()">Открыть окно</button>
+
+    <dialog id="info">
+        <p>Это пример диалогового окна.</p>
+        <button onclick="document.getElementById('info').close()">Закрыть</button>
+    </dialog>
+
+    <canvas width="200" height="100" style="border:2px solid black;"></canvas>
+
+    <svg width="200" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" fill="lightgray"/>
+    </svg>
+
+    <object data="videos/video.mp4" width="200" height="150"></object>
+    <embed src="videos/video.mp4" width="200" height="150">
+
+    <noscript>Включите JavaScript для корректной работы.</noscript>
+
+    <script>
+        console.log("Страница загружена");
+    </script>
+</section>
+
+</main>
+
+<aside>
+    <p><span>Любимый курс:</span> <strong>Дискретная математика</strong></p>
+</aside>
+
+<footer>
+    <p>© <time datetime="2026">2026</time></p>
+</footer>
+
+<button id="mapButton" class="floating-map">🗺</button>
+
+<div id="mapBox">
+    <button id="closeMap">Свернуть</button>
+    <div id="map"></div>
+</div>
+
+<button id="chatButton" class="floating-chat">💬</button>
+
+<div id="chatBox">
+
+<div id="chatHeader">
+Чат
+<button id="closeChat">Свернуть</button>
+</div>
+
+<div id="chatMessages"></div>
+
+<div id="chatControls">
+<input id="chatInput" placeholder="Введите сообщение">
+<button id="sendBtn">➤</button>
+<button id="voiceBtn">🎤</button>
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ol@v9.2.4/dist/ol.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #004080;
+    margin-top: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+header {
+    background-color: #e6f2ff;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #003366;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+audio {
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+article p.highlight::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
+
+article p.highlight::first-line {
+    color: #0000ff;
+    font-variant: small-caps;
+}
+
+section details summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+ol.inline-list li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+dl dd {
+    margin-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+
+table caption {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+figure img {
+    border: 3px solid #003366;
+    float: right;
+    margin-left: 10px;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #004080;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+dialog {
+    border: 2px solid #003366;
+    padding: 20px;
+}
+
+canvas, svg, object, embed {
+    display: block;
+    margin: 10px 0;
+}
+
+aside {
+    background-color: #e6f2ff;
+    padding: 10px;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+aside span {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+input, select, textarea {
+    padding: 5px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    width: 50%;
+}
+
+form fieldset {
+    border: 2px solid #003366;
+    padding: 15px;
+}
+
+form legend {
+    font-weight: bold;
+    color: #003366;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+    figure img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    ol.inline-list li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+
+.floating-map{
+position:fixed;
+bottom:20px;
+left:20px;
+width:55px;
+height:55px;
+border-radius:50%;
+font-size:22px;
+z-index:1000;
+}
+
+.floating-chat{
+position:fixed;
+bottom:20px;
+right:20px;
+width:55px;
+height:55px;
+border-radius:50%;
+font-size:22px;
+z-index:1000;
+}
+
+#mapBox{
+display:none;
+position:fixed;
+bottom:90px;
+left:20px;
+width:320px;
+background:white;
+border:2px solid #003366;
+padding:5px;
+z-index:1000;
+}
+
+#map{
+width:300px;
+height:200px;
+}
+
+#chatBox{
+display:none;
+position:fixed;
+bottom:90px;
+right:20px;
+width:300px;
+height:360px;
+background:white;
+border:2px solid #003366;
+flex-direction:column;
+z-index:1000;
+}
+
+#chatHeader{
+background:#003366;
+color:white;
+padding:5px;
+display:flex;
+justify-content:space-between;
+}
+
+#chatMessages{
+flex:1;
+overflow-y:auto;
+padding:10px;
+}
+
+#chatControls{
+display:flex;
+gap:5px;
+padding:5px;
+}
+
+.user{
+text-align:right;
+margin:5px;
+}
+
+.bot{
+color:blue;
+margin:5px;
+}

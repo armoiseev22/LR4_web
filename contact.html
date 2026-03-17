@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задать вопрос</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.css">
+
+    <style>
+        form {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1 style="color:darkblue;">Задать вопрос</h1>
+
+    <nav>
+        <a href="index.html">Главная</a>
+    </nav>
+    <hr>
+</header>
+
+<main>
+
+<form action="/submit" method="post">
+
+<fieldset>
+
+<legend>Контактная информация</legend>
+
+<label for="name">Имя:</label>
+<input type="text" id="name" name="name" required>
+
+<br><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+
+<br><br>
+
+<label for="status">Статус:</label>
+
+<select id="status" name="status">
+
+<optgroup label="Бакалавриат">
+<option value="1">Школьник</option>
+<option value="2">Студент</option>
+<option value="3">Родитель</option>
+</optgroup>
+
+</select>
+
+<br><br>
+
+<label for="topic">Тема:</label>
+
+<input list="topics" id="topic" name="topic">
+
+<datalist id="topics">
+<option value="Поступление">
+<option value="Дисциплины">
+<option value="Проекты">
+</datalist>
+
+<br><br>
+
+<label for="message">Сообщение:</label><br>
+
+<textarea id="message" name="message" rows="5" cols="40"></textarea>
+
+<br><br>
+
+<label>Оценка сайта:</label>
+
+<input type="range" min="0" max="10" value="5" oninput="result.value=this.value">
+
+<output name="result">5</output>
+
+</fieldset>
+
+<br>
+
+<button type="submit">Отправить</button>
+
+</form>
+
+</main>
+
+<footer>
+<p>© 2026</p>
+</footer>
+
+<button id="mapButton" class="floating-map">🗺</button>
+
+<div id="mapBox">
+<button id="closeMap">Свернуть</button>
+<div id="map"></div>
+</div>
+
+<button id="chatButton" class="floating-chat">💬</button>
+
+<div id="chatBox">
+
+<div id="chatHeader">
+Чат
+<button id="closeChat">Свернуть</button>
+</div>
+
+<div id="chatMessages"></div>
+
+<div id="chatControls">
+<input id="chatInput">
+<button id="sendBtn">➤</button>
+<button id="voiceBtn">🎤</button>
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ol@v9.2.4/dist/ol.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
